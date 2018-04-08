@@ -1,0 +1,11 @@
+---
+layout: default
+title: Rabbit MQ二三事
+---
+
+##消息队列的概念
+消息队列（Message Queue）是一种Service间的通信方式，消息发送后可以立即返回，由消息系统来确保消息的可靠传递。消息发布者只管把消息发布到MQ中而不用管谁来取，消息使用者只管从MQ中取消息而不管是谁发布的。这样发布者和使用者都不用知道对方的存在。应用MQ有利于Service之间的解耦。
+
+##消息队列的模型
+消费者（consumer）订阅某个队列。生产者（producer）创建消息，然后发布到队列（queue）中，最后将消息发送到监听的消费者。
+(https://upload-images.jianshu.io/upload_images/5015984-367dd717d89ae5db.png?imageMogr2/auto-orient/)
